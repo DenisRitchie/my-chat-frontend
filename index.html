@@ -1,21 +1,24 @@
+﻿<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
-    <title>Chat</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/base.css">
-    <link rel="stylesheet" href="//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/chat.css">
+    <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" href="style/style.css" />
 </head>
-
-<body>
-    <div id="app" class="flex flex-column"></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.js"></script>
-    <script src="//npmcdn.com/feathers-client@^2.0.0-pre.1/dist/feathers.js">
-    </script>
-    <script src="socket.io.js"></script>
-    <script src="index.js"></script>
+<body ng-app="luccaApp" data-ng-controller="indexController">
+    <h3 class="text-center">{{translate.translations.TITLE}} </h3>
+    <div ng-view="" ng-cloak=""></div>
+    <!-- 3rd party libraries -->
+    <script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script data-require="angular-route@*" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+    <!-- <script src="https://webrtc.github.io/samples/src/js/adapter.js"></script> -->
+    <script src="http://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="scripts/common.js"></script>
+    <!-- Load app main script -->
+    <script src="luccaApp/luccaApp.js"></script>
+    <!-- Load services -->
+    <script src="luccaApp/translation/translationService.js"></script>
+    <!-- Load controllers -->
+    <script src="luccaApp/index/indexController.js"></script>
+    <script src="luccaApp/chat/chatController.js"></script>
 </body>
-
 </html>

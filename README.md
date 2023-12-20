@@ -1,2 +1,2 @@
-# my-chat-frontend
-Aplicación Web Para Chat Sólo Frontend
+# ServerlessChat
+Serveless Chat using WebRTC in a single page application.
